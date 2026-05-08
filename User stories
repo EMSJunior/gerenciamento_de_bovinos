@@ -1,0 +1,19 @@
+User Stories
+Autenticação e Acesso (Dev 2 - Thiago)
+Como um usuário (Gerente, Veterinário ou Peão), eu quero fazer login com meu usuário e senha para que eu possa acessar o sistema com segurança.
+Como usuário, eu quero que o sistema valide minhas credenciais e trate tentativas de acesso indevido para que dados sensíveis não sejam corrompidos ou acessados por pessoas não autorizadas.
+Como um usuário logado, eu quero ver um menu específico para o meu cargo para que eu tenha acesso apenas às funcionalidades pertinentes ao meu trabalho.
+
+Gestão Geral do Rebanho (Dev 1 - Edson)
+Como um Gerente, eu quero cadastrar um novo bovino com ID e informações básicas (raça, sexo, data de nascimento) para que o animal passe a fazer parte do controle do sistema.
+Como um usuário do sistema, eu quero que o sistema valide o ID do bovino inserido para que eu não duplique registros ou tente acessar animais inexistentes.
+
+Vacinação e Saúde (Dev 3 - João)
+Como um Veterinário, eu quero registrar uma vacina (nome, data, lote) aplicada em um bovino específico para que o controle sanitário daquele animal fique atualizado.
+Como um Veterinário, eu quero buscar um bovino pelo seu ID e visualizar seu histórico completo de vacinação para que eu saiba rapidamente quais doses ele já tomou e quais estão faltando.
+Como um Gerente, eu quero gerar relatórios de saúde do rebanho para que eu possa planejar compras de vacinas e campanhas sanitárias na fazenda.
+
+Operacional: Peso e Mortalidade (Dev 4 - Luis)
+Como um Peão, eu quero registrar o peso de um bovino em uma data específica para que o ganho de massa do animal possa ser monitorado ao longo do tempo.
+Como um Peão, eu quero registrar a morte de um bovino, informando a data e a causa, para que o status do animal seja atualizado e ele pare de constar como ativo no rebanho.
+Como um Gerente, eu quero visualizar relatórios operacionais consolidados de evolução de peso e índice de mortalidade para que eu possa avaliar a produtividade e as perdas financeiras da fazenda.

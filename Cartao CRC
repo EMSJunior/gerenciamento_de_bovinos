@@ -1,0 +1,40 @@
+Cartao CRC
+
+Classe: Sistema
+Responsabilidades: Inicializar a aplicação e carregar os dados persistidos. Exibir o menu principal e submenus de acordo com o nível de acesso. Orquestrar o fluxo de informações entre a interface do usuário e a lógica de negócios.
+Colaboradores: Autenticador, GerenciadorBovinos, Usuario
+
+Classe: GerenciadorBovinos
+Responsabilidades: Manter a coleção (vetor ou lista) de todos os bovinos do rebanho. Realizar buscas, cadastros e validações de existência (evitar IDs duplicados ou inválidos). Gerenciar a persistência de dados (salvar/ler na pasta data/).
+Colaboradores: Bovino, RegistroVacina, RegistroPeso, RegistroMorte
+
+Classe: Autenticador
+Colaboradores: Usuario
+
+Classe: Usuario (Superclasse) / Gerente, Veterinario, Peao (Subclasses)
+Responsabilidades: Armazenar dados do usuário (login, senha). Definir o nível de permissão (qual menu o usuário pode acessar).
+Colaboradores: Autenticador, Sistema
+
+Classe: Bovino
+Responsabilidades: Armazenar dados básicos do animal (ID, raça, data de nascimento, sexo, status de vida). Manter internamente suas próprias listas de vacinas e pesagens.
+Colaboradores: RegistroVacina, RegistroPeso, RegistroMorte
+
+Classe: RegistroVacina
+Responsabilidades: Armazenar os dados individuais de uma aplicação (nome da vacina, data, lote, observações). Validar se a data da vacinação faz sentido.
+Colaboradores: Bovino
+
+Classe: RelatorioSaude
+Responsabilidades: Percorrer a lista de bovinos e extrair o histórico de vacinação. Formatar e exibir os dados para o Veterinario ou Gerente (ex: vacinas atrasadas, histórico completo de um ID).
+Colaboradores: GerenciadorBovinos, Bovino, RegistroVacina
+
+Classe: RegistroPeso
+Responsabilidades: Armazenar os dados de pesagem (data, peso em kg). Permitir o cálculo de ganho de peso.
+Colaboradores: Bovino
+
+Classe: RegistroMorte
+Responsabilidades: Registrar data e causa do óbito. Atualizar o status do bovino para inativo/morto.
+Colaboradores: Bovino
+
+Classe: RelatorioOperacional
+Responsabilidades: Consolidar dados de evolução de peso e índice de mortalidade do rebanho. Formatar e exibir a visão geral para o Gerente.
+Colaboradores: GerenciadorBovinos, Bovino, RegistroPeso, RegistroMorte

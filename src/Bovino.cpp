@@ -20,7 +20,7 @@ void Bovino::adicionarPeso(const RegistroPeso& p){
     this->pesos.push_back(p);
 }
 
-void Bovino::adicionarVacina(const RegistroVacina& vacina) {
+void Bovino::adicionarVacina(const Vacinacao& vacina) {
 
     if(!this->isVivo()){
         throw std::runtime_error("Erro: Não é possível aplicar vacina em um bovino morto.");

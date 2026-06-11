@@ -1,12 +1,17 @@
-#ifndef RELATORIOSAUDE_H
-#define RELATORIOSAUDE_H
+#ifndef RELATORIO_SAUDE_H
+#define RELATORIO_SAUDE_H
 
-#include "GerenciadorBovinos.h"
+#include <map>
+#include "Bovino.h"
 
 class RelatorioSaude {
 public:
-    static int totalVacinacoes(const GerenciadorBovinos& g);
-    static void listarHistoricoVacinas(const GerenciadorBovinos& g, int idBovino);
+
+    RelatorioSaude() = default;
+
+    void gerarRelatorioGeral(const std::map<int, Bovino>& rebanho) const;
+
+    void exibirHistoricoAnimal(const std::map<int, Bovino>& rebanho, int idBovino) const;
 };
 
 #endif

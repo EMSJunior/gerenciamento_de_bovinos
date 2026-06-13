@@ -40,7 +40,7 @@ O executável é gerado em `build/` (`build/gerenciamento` no Linux/Mac,
 ## Link do vídeo
 Vídeo de demonstração (≤ 5 min) com compilação, execução e operação do sistema:
 
-**🎬 [EM PRODUÇÃO — inserir link aqui]**
+**🎬 [(https://drive.google.com/file/d/1-512KF9yg0TyX3kRerPlenpyeIR3621D/view?usp=sharing)]**
 
 ---
 

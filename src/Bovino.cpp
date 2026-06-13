@@ -3,7 +3,41 @@
 #include <iostream>
 #include <stdexcept>
 
+// Todo bovino nasce "vivo"; o status só muda quando uma morte é registrada.
+Bovino::Bovino(int id, std::string nome, std::string raca, int idade)
+    : id(id), nome(nome), raca(raca), idade(idade), vivo(true) {}
 
+int Bovino::getId() const {
+    return this->id;
+}
+
+std::string Bovino::getNome() const {
+    return this->nome;
+}
+
+std::string Bovino::getRaca() const {
+    return this->raca;
+}
+
+int Bovino::getIdade() const {
+    return this->idade;
+}
+
+bool Bovino::isVivo() const {
+    return this->vivo;
+}
+
+std::vector<Vacinacao> Bovino::getVacinacoes() const {
+    return this->historicoVacinacao;
+}
+
+std::vector<RegistroPeso> Bovino::getPesos() const {
+    return this->pesos;
+}
+
+std::vector<RegistroMorte> Bovino::getMortes() const {
+    return this->mortes;
+}
 
 void Bovino::registrarMorte(const RegistroMorte& m){
     if(!this->isVivo()){

@@ -15,7 +15,7 @@ private:
     int idade;
     bool vivo;
 
-    std::vector<Vacinacao> vacinacoes;
+    std::vector<Vacinacao> historicoVacinacao;
     std::vector<RegistroPeso> pesos;
     std::vector<RegistroMorte> mortes;
 
@@ -28,13 +28,15 @@ public:
     int getIdade() const;
     bool isVivo() const;
 
-    void adicionarVacinacao(const Vacinacao& v);
+    void adicionarVacina(const Vacinacao& v);
     void adicionarPeso(const RegistroPeso& p);
     void registrarMorte(const RegistroMorte& m);
 
     std::vector<Vacinacao> getVacinacoes() const;
     std::vector<RegistroPeso> getPesos() const;
     std::vector<RegistroMorte> getMortes() const;
+
+    void exibirHistoricoVacinacao() const;
 };
 
 #endif

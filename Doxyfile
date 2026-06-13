@@ -1,0 +1,38 @@
+# Doxyfile - Sistema de Gerenciamento de Bovinos
+# Configuracao minima e funcional. Opcoes nao listadas usam o padrao do Doxygen.
+
+# --- Projeto ---
+PROJECT_NAME           = "Sistema de Gerenciamento de Bovinos"
+PROJECT_BRIEF          = "Controle de rebanho em C++ com acesso por perfil de usuario"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Brazilian
+DOXYFILE_ENCODING      = UTF-8
+INPUT_ENCODING         = UTF-8
+
+# --- Entrada ---
+INPUT                  = include src README.md
+FILE_PATTERNS          = *.h *.cpp *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# --- Extracao ---
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+
+# --- Saida ---
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+
+# --- Diagramas (so se o Graphviz/dot estiver instalado) ---
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES
+
+# --- Diversos ---
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = NO
+SORT_MEMBER_DOCS       = NO
